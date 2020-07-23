@@ -122,7 +122,7 @@ const Signup =(props)=>{
                                               .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                                               .join('&');
                                         }                                        
-                                        axios.post('http://localhost:3001/signup', 
+                                        axios.post('https://server-master.herokuapp.com/signup', 
                                                     encodeForm(formData))
                                                     .then(function (response) {
                                                         console.log(response.data);

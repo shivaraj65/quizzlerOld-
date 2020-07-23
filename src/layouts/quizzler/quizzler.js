@@ -36,7 +36,7 @@ const Quizzler= (props) => {
     // let answersDone=[];
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/quizData')
+        axios.get('https://server-master.herokuapp.com/quizData')
         .then(function (response) {
           // handle success
           if(response !=="noData"){
@@ -143,7 +143,7 @@ const Quizzler= (props) => {
                   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                   .join('&');
             }                                 
-            axios.post('http://localhost:3001/scoreSave', 
+            axios.post('https://server-master.herokuapp.com/scoreSave', 
                         encodeForm(formData))
                         .then(function (response) {  
                             console.log(response.data);
@@ -161,13 +161,13 @@ const Quizzler= (props) => {
     };
 
     const submitHandle2=()=>{
-        let formData = {quizID:questions._id,userID:props.userinfo._id,Score:score};
+        let formData = {quizID:questions._id,userID:props.userinfo._id,Score:0};
             const encodeForm = (data) => {
               return Object.keys(data)
                   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                   .join('&');
             }                                 
-            axios.post('http://localhost:3001/scoreSave', 
+            axios.post('https://server-master.herokuapp.com/scoreSave', 
                         encodeForm(formData))
                         .then(function (response) {  
                             console.log(response.data);
@@ -183,8 +183,8 @@ const Quizzler= (props) => {
                             // console.log(error);
                             // setFlagSubmitDB("error");
                         });
-        }
-    };
+        };
+
 
 
     return(
@@ -304,7 +304,7 @@ const Quizzler= (props) => {
                         console.log('Leaving full-screen mode.');
                         if(flagPage==="quiztime"){
                             //violation detected block
-                            setScore=0;
+                            setScore(0);
                             submitHandle2();
                         }
                     }
