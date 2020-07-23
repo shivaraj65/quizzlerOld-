@@ -1,0 +1,47 @@
+
+.background {
+  width:100vw;
+  height:100vh;
+  background: #36D1DC;
+  background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);
+  background: linear-gradient(to top, #5B86E5, #36D1DC);
+  z-index: -9999;
+  position: fixed;
+}
+.devAnchor{
+  font-family: 'Audiowide', cursive;
+  color: #dc3545;
+  font-size: 1.2rem;
+  border-bottom: 3px solid  #5B86E5;
+}
+.devAnchor:hover{
+  text-decoration: none;
+}
+.brand{
+  font-family: 'Pacifico', cursive;
+  color: #dc3545;
+  padding: 20px;
+}
+.centerText{
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.footer{
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width:100%;
+}
+.font1{
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 20px;
+  color:#dc3545;
+}
+.font2{
+  font-family: 'Audiowide', cursive;
+}

@@ -1,0 +1,40 @@
+.font1{
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 20px;
+  color:#dc3545;
+}
+.font2{
+  font-family: 'Audiowide', cursive;
+}
+.pFont{
+  font-family: 'Merriweather', serif
+}
+.card {
+    width:100%;
+    padding: 10px;
+    margin:auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background: #d3f4ff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.4s;
+  }
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+  }
+  .anchor{
+    display:flex;
+    color: inherit;
+    text-decoration: none;
+  }
+  .anchor:hover{
+    color: #5B86E5;
+    text-decoration: none;
+  }
+  @media(min-width:1000px){
+    .card{
+      width:100%;
+    }
+  }
+

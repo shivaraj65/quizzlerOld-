@@ -1,0 +1,51 @@
+.card {
+  text-align: left;
+  width:100%;
+  padding: 10px;
+  margin: 15px auto;
+  background: #fff;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.font2{
+  padding-left: 10px;
+  font-size: 1.3rem;
+  color:#dc3545;
+  font-family: 'Merriweather', serif;
+}
+.container {
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  /* font-size: 22px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio{
+  font-size: 110%;
+}
+.options{
+  text-align: left;
+  font-family: 'Merriweather', serif;
+  text-align: left;
+  padding-left: 15px;
+  display: block;
+}
+.optionText{
+  font-size: 1.1rem;
+  padding-left: 10px;
+}
+@media(min-width:1000px){
+  .card{
+    width:100%;
+  }
+}

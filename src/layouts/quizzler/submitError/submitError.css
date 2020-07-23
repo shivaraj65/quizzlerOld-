@@ -1,0 +1,47 @@
+.background {
+    width:100vw;
+    height:100vh;
+    background: rgb(57,62,70,0.7);
+    z-index: 0;
+    position: fixed;
+  }
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  z-index:100;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.card {
+  width:80%;
+  padding: 10px;
+  margin: 15px auto;
+  background: #fff;
+  border:2px solid #28a745;
+  border-radius:100% 6% 100% 4% / 7% 100% 8% 100%      ;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.pFont{
+  font-family: 'Merriweather', serif
+}
+@media(min-width:1000px){
+  .card{
+    width:45%;
+  }
+}

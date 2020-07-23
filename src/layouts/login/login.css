@@ -1,0 +1,52 @@
+.background {
+  width:100vw;
+  height:100vh;
+  background: #36D1DC;
+  background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);
+  background: linear-gradient(to top, #5B86E5, #36D1DC);
+  z-index: -9999;
+  position: fixed;
+}
+.outer {
+  z-index: -5000;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+  
+}
+.inner {
+  margin:auto;
+  width:95%;
+  text-align: center;
+}
+
+.h3{
+  font-family: 'Audiowide', cursive;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+.margin{
+  margin: 10px 0;
+}
+.padding{
+  padding: 10px;
+}
+.footer{
+  padding-top: 10px;
+}
+.pFont{
+  font-family: 'Merriweather', serif;
+}
+
+@media(min-width:1000px){
+  .inner{
+    width:40%;
+  }
+}

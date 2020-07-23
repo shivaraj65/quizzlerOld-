@@ -1,0 +1,64 @@
+.background {
+    width:100vw;
+    height:100vh;
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);
+    background: linear-gradient(to top, #5B86E5, #36D1DC);
+    z-index: -9999;
+    position: fixed;
+  }
+  .devAnchor{
+    color: #dc3545;
+    font-size: 1.2rem;
+    border-bottom: 3px solid  #5B86E5;
+  }
+  .devAnchor:hover{
+    text-decoration: none;
+  }
+  .outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .inner {
+    overflow: scroll;
+    height:100vh;
+    margin:auto;
+    padding: 40px 0;
+    width:90%;
+    text-align: center;
+  }
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+  @media(min-width:1000px){
+    .inner{
+        width:45%;
+    }
+    .img{
+      width:60%;
+    }
+  }
+  .font1{
+    font-family: 'Pacifico', cursive;
+    padding: 20px;
+    color:#dc3545;
+  }
+  .font2{
+    font-family: 'Audiowide', cursive;
+  }
+ 
+  @media(max-width:500px){
+    .inner{
+      margin-top: 30px;
+    }
+  }
