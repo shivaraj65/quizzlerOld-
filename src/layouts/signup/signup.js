@@ -121,7 +121,8 @@ const Signup =(props)=>{
                                           return Object.keys(data)
                                               .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                                               .join('&');
-                                        }                                        
+                                        }
+                                        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';                                        
                                         axios.post('https://server-master.herokuapp.com/signup', 
                                                     encodeForm(formData))
                                                     .then(function (response) {

@@ -1,8 +1,11 @@
 import React,{useState} from 'react';
+
 import axios from 'axios';
 import style from './login.css';
 import pop from './popup.css';
-import resolve from 'resolve';
+// import resolve from 'resolve';
+import * as QueryString from "query-string";
+
 
 const Login =(props)=>{
     const [email,setEmail]=useState(null);
@@ -75,13 +78,22 @@ const Login =(props)=>{
                                     onClick={()=>{
                                         // console.log("from onclick"+props);
                                         let formData = {Email: email,Password: password};
-                                        const encodeForm = (data) => {
-                                          return Object.keys(data)
-                                              .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-                                              .join('&');
-                                        }                                        
+                                        // const encodeForm = (data) => {
+                                        //   return Object.keys(data)
+                                        //       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+                                        //       .join('&');
+                                        // }    
+                                        console.log(QueryString.stringify(formData));            
+                                        // axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+                                        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+                                        const config  = {
+                                                headers: {
+                                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                                    'Access-Control-Allow-Origin':'*'
+                                                }
+                                                }               
                                         axios.post('https://server-master.herokuapp.com/login', 
-                                                    encodeForm(formData))
+                                                    QueryString.stringify(formData),config)
                                                     .then(function (response) {
                                                         // console.log(response.data);
                                                         payload=response.data;

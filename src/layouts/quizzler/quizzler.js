@@ -36,6 +36,7 @@ const Quizzler= (props) => {
     // let answersDone=[];
 
     useEffect(()=>{
+        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
         axios.get('https://server-master.herokuapp.com/quizData')
         .then(function (response) {
           // handle success
@@ -142,7 +143,8 @@ const Quizzler= (props) => {
               return Object.keys(data)
                   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                   .join('&');
-            }                                 
+            }            
+            axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';                     
             axios.post('https://server-master.herokuapp.com/scoreSave', 
                         encodeForm(formData))
                         .then(function (response) {  
@@ -166,7 +168,8 @@ const Quizzler= (props) => {
               return Object.keys(data)
                   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                   .join('&');
-            }                                 
+            }                   
+            axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';              
             axios.post('https://server-master.herokuapp.com/scoreSave', 
                         encodeForm(formData))
                         .then(function (response) {  
